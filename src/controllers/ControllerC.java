@@ -49,18 +49,18 @@ public class ControllerC {
     }
        public void writeFile (String path, String message) {
            try {
-            File archivo = new File(path); // Abre el archivo de la ruta especificada, si no existe, lo crea (según el path o ruta).
-            FileWriter filewriter = new FileWriter(archivo, true); // Permite subreescribir (parámetro 'true') en el archivo especificado.
+            File archivo = new File(path); // Abre el archivo en ruta o la crea
+            FileWriter filewriter = new FileWriter(archivo, true); 
             
-            try (PrintWriter printwriter = new PrintWriter(filewriter) ) { // Permite guardar el nuevo contenido en del archivo especificado.
+            try (PrintWriter printwriter = new PrintWriter(filewriter) ) { // Guarda el contenido
                 printwriter.println(message);
                 printwriter.close();
             }
         }
-        catch (FileNotFoundException err) { // Detecta un error en caso de no encontrar el archivo en el path indicado.
+        catch (FileNotFoundException err) { //solo si no se encuentra el archivo
             System.err.println("Archivo no encontrado: " + err.getMessage());
         }
-        catch (IOException err) { // Marca error en caso de no contar con los permisos para acceder al archivo indicado.
+        catch (IOException err) { //si no se puede acceder al archivo
             System.err.println("Error de entrada y salida " + err.getMessage());
         }
     

@@ -36,14 +36,11 @@ public class ViewC extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jtf_nombre.setText("jTextField1");
         jtf_nombre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jtf_nombreActionPerformed(evt);
             }
         });
-
-        jtf_email.setText("jTextField2");
 
         jl_nombre.setText("Nombre");
 
