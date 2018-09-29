@@ -5,11 +5,23 @@
  */
 package models;
 
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
 
 public class ModelC {
-    
+
     private String path = "C:\\archivos\\base.csv"; // contiene la ruta del archivo 
 
+    public int getNumero() {
+        return numero;
+    }
+
+    public void setNumero(int numero) {
+        this.numero = numero;
+    }
+    private int numero =0;
     public String getPath() {
         return path;
     }
